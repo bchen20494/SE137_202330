@@ -7,17 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="#">red</a>
+    <a href="#" class="red a b">red</a>
+    <a href="#" class="blue a b">blue</a>
+    <input type="range" min="0" max="255">
     <script>
         var body = document.querySelector('body');
-        var a = document.querySelector(`a`); 
-
-        a.addEventListener(`click`,turnRed);
+        var a = document.querySelectorAll(`a`); 
+        console.log(a.classList)
+        a[0].addEventListener(`click`, turnRed);
+        a[1].addEventListener(`click`, turnRed);
+        body.addEventListener(`click`, turnRed);
         function turnRed(e)
         {
             e.preventDefault();
-            body.style.backgroundColor = a.classlist[0];
+            body.style.backgroundColor = e.target.classList[0];
         }
+
+        document.querySelector(`input`).addEventListener(`mousemove`, function(e){
+            console.log(e.target.value)
+            body.style.backgroundColor = `rpg(${e.target.value},${e.target.value},${e.target.value})`;
+        })
     </script>
 </body>
 </html>

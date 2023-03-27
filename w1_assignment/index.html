@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hide{
+            display:none;
+        }
+        /*
+        comment
+        */
+        h2{
+            font-size:64px;
+        }
+        body{
+            background-color: #F00000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Header</h1>
+    <div id="nav">
+        <a href="#">bio</a>
+        <a href="#">education</a>
+        <a href="#">hobbies</a>
+    </div>
+    <div id="main">
+        <div id="bio" class="content">
+            <h2>Bio</h2>
+        </div>
+        <div id="ed" class="content">
+            <h2>Education</h2>
+        </div>
+        <div id="hobbies" class="content">
+            <h2>Hobbies</h2>
+        </div>
+    </div>
+    <script>
+        var a = document.querySelectorAll(`#nav a`);
+
+
+        for(let i=0; i<a.length; i++) // let allows for different i's in different variables
+        {
+            a[0].addEventListener(`click`, function(e){
+                e.preventDefault();
+
+                var div = document.querySelectorAll(`.content`);
+
+                for(let i=0; 1<div.length; i++) // let forces into local scope
+                {
+                    div[i].classList.add(`hide`);
+                }
+
+                div[i].cassList.remove(`hide`);
+                // document.querySelector(`#${e.target.innerText}`).
+                // classList.remove(`hide`);
+
+            })
+        }
+    </script>
+</body>
+</html>
