@@ -13,53 +13,72 @@
         comment
         */
         h2{
-            font-size:64px;
+            font-size:12px;
         }
         body{
-            background-color: #F00000;
+            background-color:rgba(255,127,80);
         }
     </style>
 </head>
 <body>
-    <h1>Header</h1>
-    <div id="nav">
-        <a href="#">bio</a>
-        <a href="#">education</a>
-        <a href="#">hobbies</a>
-    </div>
-    <div id="main">
+   <h1>Header</h1>
+   <div id="nav">
+    <a href="#">bio</a> 
+    <a href="#">eduation</a> 
+    <a href="#">hobbies</a> 
+   </div>
+   <div id="main">
         <div id="bio" class="content">
             <h2>Bio</h2>
+            <p>I am an student earning a degree in <i>Software Engineering </i> at <b>New England Tech</b>. I live in two-story white-painted house at <u>Middletown RI</u>, with my parents and younger brother. 
+                I enjoy reading fantasy web novel stories and walking on trails in my free time. I work as a driver and have experience working at a Amazon warehouse and at a restaurant. </p>
         </div>
         <div id="ed" class="content">
             <h2>Education</h2>
+            <ol>
+                <li>Melrose Elemntary School</li>
+                <li>Lawn Middleschool</li>
+                <li>Middletown Highschool</li>
+            </ol>
         </div>
         <div id="hobbies" class="content">
             <h2>Hobbies</h2>
+            <ul>
+                <li>Collecting literature</li>
+                <li>Hiking</li>
+                <li>Gardening</li>
+
+            </ul>
         </div>
-    </div>
+   </div>
+   <!--FOOTER SECTION-->
+   <div id="footer">
+            
+    <p>&copy;2023 B Chen | W1 Assignment
+    <br>
+    <a href="index.html#nav"> | Top of HOME PAGE | </a>
+
     <script>
         var a = document.querySelectorAll(`#nav a`);
-
-
-        for(let i=0; i<a.length; i++) // let allows for different i's in different variables
+        
+        for(let i=0; i<a.length; i++)
         {
-            a[0].addEventListener(`click`, function(e){
+            a[i].addEventListener(`click`, function(e){
                 e.preventDefault();
 
                 var div = document.querySelectorAll(`.content`);
 
-                for(let i=0; 1<div.length; i++) // let forces into local scope
+                for(let i=0; i<div.length; i++)
                 {
                     div[i].classList.add(`hide`);
                 }
 
-                div[i].cassList.remove(`hide`);
-                // document.querySelector(`#${e.target.innerText}`).
-                // classList.remove(`hide`);
-
+               div[i].classList.remove(`hide`);
+                
             })
         }
+
+      
     </script>
 </body>
 </html>
