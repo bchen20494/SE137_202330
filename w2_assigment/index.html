@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hide{
+            display:none;
+        }
+        /*
+        comment
+        */
+        h2{
+            font-size:12px;
+        }
+        body{
+            background-color:rgba(173, 216, 230);
+        }
+    </style>
+</head>
+<body>
+   <h1>Brian Chen</h1>
+   <div id="nav">
+    <hr>
+    <a href="#">| BIO |</a> 
+    <a href="#">EDUCATION |</a> 
+    <a href="#">HOBBIES |</a> 
+    <hr>
+   </div>
+   <div id="main">
+        <div id="bio" class="content">
+            <h2>Bio</h2>
+            <p>I am an student earning a degree in <i>Software Engineering </i> at <b>New England Tech</b>. I live in two-story white-painted house at <u>Middletown RI</u>, with my parents and younger brother. 
+                I enjoy reading fantasy web novel stories and walking on trails in my free time. I work as a driver and have experience working at a Amazon warehouse and at a restaurant. </p>
+        </div>
+        <div id="ed" class="content">
+            <h2>Education</h2>
+            <ol>
+                <li>Melrose Elemntary School</li>
+                <li>Lawn Middle School</li>
+                <li><a href="https://www.mpsri.net/" target="blank">Middletown Highschool</a></li>
+            </ol>
+        </div>
+        <div id="hobbies" class="content">
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Collecting literature</li>
+                <li>Hiking</li>
+                <li>Gardening</li>
+
+            </ul>
+            <hr>
+        </div>
+   </div>
+
+    <p>&copy;2023 B Chen | W1 Assignment
+    <br>
+    <a href="index.html#nav"> | Top of HOME PAGE | </a>
+
+    <!--VALIDATION IMAGE SCREENSHOT BELOW-->
+    <div>
+        <img src="../w1_assignment/images/Capture.JPG
+        " alt="validation screenshot" style="width:500px">
+    </div>
+
+
+    <script>
+        var a = document.querySelectorAll(`#nav a`);
+        
+        for(let i=0; i<a.length; i++)
+        {
+            a[i].addEventListener(`click`, function(e){
+                e.preventDefault();
+
+                var div = document.querySelectorAll(`.content`);
+
+                for(let i=0; i<div.length; i++)
+                {
+                    div[i].classList.add(`hide`);
+                }
+
+               div[i].classList.remove(`hide`);
+                
+            })
+        }
+
+      
+    </script>
+</body>
+</html>
