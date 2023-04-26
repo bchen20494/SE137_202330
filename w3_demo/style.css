@@ -1,0 +1,59 @@
+@charset "UTF-8";
+html{
+    box-sizing: border-box;
+    height: 100px;
+}
+body{
+    margin: 0px;
+    height: 100%;
+}
+main{
+    display:grid;
+    grid-template-areas:"h h h h h"
+                        "s s s s s"
+                        "n n n n n"
+                        "f f f f f";
+    color:aliceblue;
+    padding: 50px 20px 0 10px; 
+    border: solid 10px;
+    position: relative;
+    margin: 50px;
+}
+header{
+    width:50%;
+    background-color: aqua;
+    padding: 20px;
+    box-sizing: border-box;
+    grid-area:h;
+}
+nav{
+    background-color: magenta;
+    grid-area:n;
+}
+
+footer{
+    background-color: red;
+    grid-area:f;
+}
+
+section{
+    background-color: yellow;
+    grid-area:s;
+}
+
+nav a{
+    display: inline-block;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    transform: rotate(20);
+}
+
+nav a:link, nav a:visited{
+
+    background-color: bisque;
+
+}
+nav a:hover, nav a:active{
+    background-color: white;
+}
