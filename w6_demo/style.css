@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    height:100px;
+}
+body{
+    margin:0;
+    min-height: 100px;
+    background-color: #666;
+}
+main{
+    display: flex;
+}
+nav{
+    background-color: #999;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 10px
+}
+aside{
+    background-color: #333;
+    width: 200px;
+    transition: width 1s;
+    color: aliceblue;
+    overflow: hidden;
+    display: flex;
+
+}
+textarea{
+    background-color: black;
+    resize: none;
+    width: 100%;
+    color: white;
+    outline: 0;
+    border: 0 solid black;
+}
+a{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: greenyellow
+}
+.close{
+    width: 0px
+}
+#text{
+    width: 100px;
+    float: right
+}
